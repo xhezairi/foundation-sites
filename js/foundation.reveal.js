@@ -187,6 +187,8 @@ class Reveal {
    * @fires Reveal#open
    */
   open() {
+    if (this.id === undefined) return;
+
     if (this.options.deepLink) {
       var hash = `#${this.id}`;
 
