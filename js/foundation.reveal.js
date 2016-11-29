@@ -187,7 +187,10 @@ class Reveal {
    * @fires Reveal#open
    */
   open() {
-    if (this.id === undefined) return;
+    if (this.id === undefined) {
+      window.location.hash = `#${this.id}`;
+      return;
+    }
 
     if (this.options.deepLink) {
       var hash = `#${this.id}`;
